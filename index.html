@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOM — Бесплатный мессенджер</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, system-ui, sans-serif; }
+        body { background: #0A0A0A; color: #FFF; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #1A1A1A; }
+        .logo { font-size: 32px; font-weight: 700; color: #4A90D9; }
+        .nav a { color: #888; text-decoration: none; margin-left: 30px; font-size: 16px; transition: color 0.3s; }
+        .nav a:hover { color: #FFF; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 0; }
+        .hero-left { max-width: 500px; }
+        .hero h1 { font-size: 52px; font-weight: 700; line-height: 1.1; margin-bottom: 20px; }
+        .hero h1 span { color: #4A90D9; }
+        .hero p { color: #888; font-size: 18px; line-height: 1.6; margin-bottom: 30px; }
+        .buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 16px 36px; background: #4A90D9; color: #FFF; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 18px; transition: all 0.3s; border: none; cursor: pointer; }
+        .btn:hover { background: #3A7BC8; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid #4A90D9; }
+        .btn-outline:hover { background: #4A90D9; }
+        .features { padding: 60px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .feature { background: #1A1A1A; padding: 30px; border-radius: 16px; border: 1px solid #2A2A2A; transition: transform 0.3s; }
+        .feature:hover { transform: translateY(-5px); }
+        .feature .icon { font-size: 40px; margin-bottom: 15px; }
+        .feature h3 { color: #4A90D9; font-size: 20px; margin-bottom: 10px; }
+        .feature p { color: #888; line-height: 1.6; }
+        .screenshots { display: flex; gap: 20px; justify-content: center; padding: 40px 0; flex-wrap: wrap; }
+        .screenshot { width: 200px; height: 400px; background: #1A1A1A; border-radius: 20px; border: 2px solid #2A2A2A; display: flex; align-items: center; justify-content: center; color: #444; font-size: 14px; flex-direction: column; }
+        .screenshot .preview { font-size: 60px; margin-bottom: 10px; }
+        .footer { border-top: 1px solid #1A1A1A; padding: 30px 0; text-align: center; color: #666; margin-top: 40px; }
+        .footer a { color: #4A90D9; text-decoration: none; }
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-left { max-width: 100%; }
+            .buttons { justify-content: center; }
+            .features { grid-template-columns: 1fr; }
+            .nav a { margin-left: 15px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">🚀 LOOM</div>
+            <nav class="nav">
+                <a href="#">Главная</a>
+                <a href="#features">Возможности</a>
+                <a href="#download">Скачать</a>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-left">
+                <h1>Бесплатный<br><span>мессенджер</span><br>без рекламы</h1>
+                <p>Безопасно, быстро, удобно. Присоединяйся к LOOM и общайся с друзьями без ограничений.</p>
+                <div class="buttons">
+                    <a href="#" class="btn">📱 Скачать для Android</a>
+                    <a href="#" class="btn btn-outline">🌐 Открыть в браузере</a>
+                </div>
+            </div>
+            <div style="font-size: 120px; opacity: 0.8;">💬</div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="feature">
+                <div class="icon">🔒</div>
+                <h3>Безопасно</h3>
+                <p>Все сообщения зашифрованы. Никто не сможет их прочитать кроме вас.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">⚡</div>
+                <h3>Быстро</h3>
+                <p>Мгновенная доставка сообщений, звонки и видео-звонки без задержек.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">💯</div>
+                <h3>Бесплатно</h3>
+                <p>Никаких платных функций. Всё абсолютно бесплатно и без рекламы.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">📱</div>
+                <h3>Мультиплатформенность</h3>
+                <p>Работает на Android, iOS и в веб-браузере. Всегда на связи.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">🎥</div>
+                <h3>Звонки и видео</h3>
+                <p>Голосовые и видео-звонки высокого качества. Общайтесь лицом к лицу.</p>
+            </div>
+            <div class="feature">
+                <div class="icon">👥</div>
+                <h3>Групповые чаты</h3>
+                <p>Создавайте группы с друзьями, коллегами или единомышленниками.</p>
+            </div>
+        </section>
+
+        <section id="download" class="screenshots">
+            <div class="screenshot">
+                <div class="preview">💬</div>
+                <span>Чаты</span>
+            </div>
+            <div class="screenshot">
+                <div class="preview">👤</div>
+                <span>Профиль</span>
+            </div>
+            <div class="screenshot">
+                <div class="preview">📞</div>
+                <span>Звонки</span>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 LOOM. Все права защищены. Контакты: <a href="mailto:support@loom.com">support@loom.com</a></p>
+        </footer>
+    </div>
+</body>
+</html>
